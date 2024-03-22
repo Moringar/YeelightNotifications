@@ -1,5 +1,5 @@
 # Yeelight mute indicator
-![image](https://raw.githubusercontent.com/Moringar/YeelightNotifications/main/yeemute.png?token=GHSAT0AAAAAACODXPV3TMVUFSDH4YE4S3UAZP6C3CQ)
+![image](https://raw.githubusercontent.com/Moringar/YeelightNotifications/main/yeemute.png?token=GHSAT0AAAAAACODXPV2BXNBTVBDFBGRVD7AZP6DDXQ)
 ## Flashes red when you are mute, green when you are not. no doubts.
 
 I needed a clear indicator to know when i'm mute on voice channels, so i did this.<br>
