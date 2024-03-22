@@ -4,7 +4,7 @@
 
 I needed a clear indicator to know when i'm mute on voice channels, so i did this.<br>
 No discord bot is required : a controller and a lightbulb is enough. <br>
-The yeelight python library is needed : [url](https://gitlab.com/stavros/python-yeelight)
+The yeelight python library is needed : [here](https://gitlab.com/stavros/python-yeelight)
 
 
 ### SETUP
