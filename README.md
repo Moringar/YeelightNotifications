@@ -1,7 +1,6 @@
 # Yeelight mute indicator
-## Flashes red when you are mute, green when you are not. no doubts.
-
 ![image](https://raw.githubusercontent.com/Moringar/YeelightNotifications/main/yeemute.png?token=GHSAT0AAAAAACODXPV3TMVUFSDH4YE4S3UAZP6C3CQ)
+## Flashes red when you are mute, green when you are not. no doubts.
 
 I needed a clear indicator to know when i'm mute on voice channels, so i did this.<br>
 No discord bot is required : a controller and a lightbulb is enough. <br>
