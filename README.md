@@ -9,17 +9,28 @@ The yeelight python library is needed : [here](https://gitlab.com/stavros/python
 
 ### SETUP
 
-Provide the local ip addresses of your bulbs:
+
+Provide the local ip addresses of your bulbs, you can find it in you yeelight app and un your router interface:
 ```sh
 bulbRight = Bulb("192.168.1.155")
 bulbLeft = Bulb("192.168.1.61")
 ```
-Select you HID device
+
+the extension .pyw which will cause the script to be executed by pythonw.exe, in the background. So, to see returned values avout yours devices and inputs, set it to .py.
+
+
+
+Select you HID device:
+This will enumerate all you devices : Keyboard/mouse/controller/arduino ect.
+```sh
+devices = hid.enumerate()
+```
+Choose the on you need, and format the following line like : controller.open(VENDOR ID, PRODUCT ID)
 ```sh
 controller.open(0x1b4f, 0x9206)
 ```
 
-select the button to use to trigger notifications
+Then, "push/pull/smash" the "button/trigger/sensor" of your device, see what data is affected, then pinpoint the data in the array that will trigger your event:
 ```sh
 if inputReport[3] == 8:
 ```
