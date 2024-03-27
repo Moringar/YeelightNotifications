@@ -30,9 +30,28 @@ def setBulbColor(colorMode1, brightness1, hue1, saturation1, colorTemperature1,c
         bulbLeft.set_brightness(brightness2)
 
 # Profile of the mute button
+devices = hid.enumerate()
+for device_info in devices:
+    print("Device info:")
+    print("  Manufacturer: %s" % device_info['manufacturer_string'])
+    print("  Product: %s" % device_info['product_string'])
+    print("  Vendor ID: 0x%x" % device_info['vendor_id'])
+    print("  Product ID: 0x%x" % device_info['product_id'])
+    print("  Path: %s" % device_info['path'])
+    print()
+
 controller = hid.device()
+
+# (VENDOR ID, PRODUCT ID)
 controller.open(0x1b4f, 0x9206)
+
 controller.set_nonblocking(True)
+
+# # Start lights on Startup
+# bulbRight.turn_on()
+# bulbLeft.turn_on()
+# setBulbColor(2,63,0,0,2306, 2,86,0,0,2578)
+
 
 while True:
     # time.sleep prevents this script to overwhelm the CPU
@@ -41,6 +60,7 @@ while True:
     #Reads inputs from the controller/buttonBox ect
     inputReport = controller.read(64)
     if inputReport:
+        print(" the current controller report is: ", inputReport)
 
         
         
@@ -49,7 +69,7 @@ while True:
 
             #Save bulb state when button pressed before notification.
             savedState= savebulbState()
-            print(savedState)
+            # print(savedState)
             
             #If not mute : flash red notification and reset to saved state.
             if isMute == 0:
