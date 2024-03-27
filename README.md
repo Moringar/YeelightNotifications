@@ -16,7 +16,8 @@ bulbRight = Bulb("192.168.1.155")
 bulbLeft = Bulb("192.168.1.61")
 ```
 
-the extension .pyw which will cause the script to be executed by pythonw.exe, in the background. So, to see returned values avout yours devices and inputs, set it to .py.
+
+The extension .pyw which will cause the script to be executed by pythonw.exe, in the background. So, to see returned values avout your devices and inputs, set it to .py.
 
 
 
