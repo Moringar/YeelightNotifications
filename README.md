@@ -21,12 +21,12 @@ The extension .pyw which will cause the script to be executed by pythonw.exe, in
 
 
 
-Select you HID device:
+Select you HID device:<br>
 This will enumerate all you devices : Keyboard/mouse/controller/arduino ect.
 ```sh
 devices = hid.enumerate()
 ```
-Choose the on you need, and format the following line like : controller.open(VENDOR ID, PRODUCT ID)
+Choose the on you need in the returned values, and format the following line like : controller.open(VENDOR ID, PRODUCT ID)
 ```sh
 controller.open(0x1b4f, 0x9206)
 ```
